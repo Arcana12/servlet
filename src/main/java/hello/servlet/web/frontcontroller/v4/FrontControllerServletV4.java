@@ -61,6 +61,7 @@ public class FrontControllerServletV4 extends HttpServlet {
 
     private Map<String, String> createParamMap(HttpServletRequest request) {
         Map<String, String> paramMap = new HashMap<>();
+        //파라미터값을 paramMpa에 저장
         request.getParameterNames().asIterator()
                 .forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
         return paramMap;
